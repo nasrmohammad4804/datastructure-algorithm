@@ -2,7 +2,7 @@ package com.nasr.algorithm.sort;
 
 import java.util.Arrays;
 
-public class   InsertionSort<E extends Comparable<E>> {
+public class   InsertionSort<E extends Comparable<E>> extends SortAlgorithm<E>{
 
      public void sort(E[] elements) {
           if (isArrayContainSingleElement(elements))
@@ -26,18 +26,5 @@ public class   InsertionSort<E extends Comparable<E>> {
 
      private boolean isArrayContainSingleElement(E[] elements) {
           return elements.length == 1;
-     }
-     private void swap(int firstElementPosition, int secondElementPosition, E[] elements) {
-          E temp = elements[firstElementPosition];
-          elements[firstElementPosition] = elements[secondElementPosition];
-          elements[secondElementPosition] = temp;
-     }
-
-     public static void main(String[] args) {
-          Integer[] data= new Integer[] {7,3,9,2,4};
-          InsertionSort<Integer> insertionSort  =new InsertionSort<>();
-          insertionSort.sort(data);
-
-          System.out.println(Arrays.toString(data));
      }
 }
