@@ -1,9 +1,8 @@
 package com.nasr.algorithm.sort;
 
-import java.util.Arrays;
+public class   InsertionSort<E extends Comparable<E>>  implements Sortable<E>{
 
-public class   InsertionSort<E extends Comparable<E>> extends SortAlgorithm<E>{
-
+     @Override
      public void sort(E[] elements) {
           if (isArrayContainSingleElement(elements))
                throw new IllegalStateException("you have array with single element . doesnt need to be sorted .");
