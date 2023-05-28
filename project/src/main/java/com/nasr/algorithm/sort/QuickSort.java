@@ -22,7 +22,6 @@ public class QuickSort<E extends Comparable<E>> implements Sortable<E> {
 
     private int partition(E[] elements, int start, int end) {
 
-
         int middle = (end + start) / 2;
 
         E pivot = elements[middle];
@@ -35,11 +34,13 @@ public class QuickSort<E extends Comparable<E>> implements Sortable<E> {
             while (elements[start].compareTo(pivot) < 0)
                 start++;
 
-            if (elements[end].equals(elements[start]))
-                break;
 
-            if (start < end)
+            if (start < end){
                 swap(elements, start, end);
+
+                if (elements[start].equals(elements[end]))
+                    end--;
+            }
 
         }
         return start;
