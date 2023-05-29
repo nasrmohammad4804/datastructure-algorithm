@@ -38,5 +38,4 @@ public class Calculation {
         return valueOf(secondNumber).length();
     }
 
-
 }
